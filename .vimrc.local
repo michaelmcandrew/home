@@ -1,0 +1,23 @@
+"unbundle this stuff
+UnBundle 'Lokaltog/powerline'
+UnBundle 'myusuf3/numbers.vim'
+UnBundle 'nathanaelkane/vim-indent-guides'
+UnBundle 'altercation/vim-colors-solarized'
+UnBundle 'spf13/vim-colors'
+
+"folding not so good
+set nofoldenable
+let g:DisableAutoPHPFolding = 1
+
+set nonumber
+set nospell
+set nocursorline
+
+highlight Normal ctermbg=16
+highlight Normal ctermbg=None
+au InsertEnter * highlight Normal ctermbg=16
+au InsertLeave * highlight Normal ctermbg=None
+
+let g:DisableAutoPHPFolding = 1
+
+let g:ctrlp_cmd = 'CtrlPMRU'
