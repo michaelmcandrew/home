@@ -1,23 +1,36 @@
 "unbundle this stuff
 UnBundle 'Lokaltog/powerline'
+UnBundle 'Shougo/neocomplcache'
+UnBundle 'Shougo/neosnippet'
+UnBundle 'altercation/vim-colors-solarized'
+UnBundle 'flazz/vim-colorschemes'
+UnBundle 'godlygeek/csapprox'
 UnBundle 'myusuf3/numbers.vim'
 UnBundle 'nathanaelkane/vim-indent-guides'
-UnBundle 'altercation/vim-colors-solarized'
 UnBundle 'spf13/vim-colors'
 
-"folding not so good
+Bundle 'ervandew/supertab.git'
+Bundle 'joonty/vdebug.git'
+
+set nonumber
+set nocursorline
+set nospell
 set nofoldenable
 let g:DisableAutoPHPFolding = 1
 
-set nonumber
-set nospell
-set nocursorline
+let g:ctrlp_cmd = 'CtrlPMixed'
 
-highlight Normal ctermbg=16
-highlight Normal ctermbg=None
+set t_Co=256
+
+hi Normal ctermbg=16
+hi Normal ctermbg=None
 au InsertEnter * highlight Normal ctermbg=16
 au InsertLeave * highlight Normal ctermbg=None
 
-let g:DisableAutoPHPFolding = 1
 
-let g:ctrlp_cmd = 'CtrlPMRU'
+map  <F4> :set hls!<CR>
+imap <F4> <ESC>:set hls!<CR>a
+vmap <F4> <ESC>:set hls!<CR>gv
+
+set wildmenu
+set wildmode=list:longest,full
